@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="git_demoFlow" doc:id="4513c95d-b4bb-42a0-bcc7-eddad3e12351" >
 		<http:listener doc:name="Listener" doc:id="c4b3a9e6-0aa8-48a3-b2c2-90fdc0763ea6" config-ref="HTTP_Listener_config" path="/employeeid"/>
-		<set-payload value="Employee Details" doc:name="Set Payload" doc:id="84ff8301-7f70-46e6-baec-da8da28086ed" />
+		<set-payload value="this will gives the details of employees" doc:name="Set Payload" doc:id="84ff8301-7f70-46e6-baec-da8da28086ed" />
 	</flow>
 </mule>
