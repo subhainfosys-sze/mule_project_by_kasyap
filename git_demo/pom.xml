@@ -13,9 +13,9 @@
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<app.runtime>4.3.0-20201013</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<sonar.sources>src/main/mule</sonar.sources>
 	</properties>
 
 	<build>
@@ -31,6 +31,17 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<cloudHubDeployment>
+                        <uri>https://anypoint.mulesoft.com</uri>
+                        <username>subha66</username>
+                        <password>Subh@143</password>
+                        <environment>Sandbox</environment>
+                        <muleVersion>4.3.0</muleVersion>
+                        <workers>1</workers>
+                        <workerType>Micro</workerType>
+                        <applicationName>gitbuildsubha</applicationName>
+                        <objectStoreV2>true</objectStoreV2>
+                 </cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -49,7 +60,12 @@
             <version>1.2.0</version>
             <classifier>mule-plugin</classifier>
         </dependency>
-	</dependencies>
+        <dependency>
+             <groupId>org.sonarsource.scanner.maven</groupId>
+             <artifactId>sonar-maven-plugin</artifactId>
+             <version>3.6.1.1688</version>
+        </dependency>
+    </dependencies>
 
 	<repositories>
           <repository>
